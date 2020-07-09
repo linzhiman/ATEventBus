@@ -14,9 +14,12 @@ OC类型安全的基于block的事件总线，自动生成参数模型，支持X
 
         AT_EB_DEFINE(kName, int, a, NSString *, b)
 
-- 订阅事件
+- 订阅事件，通过event.data的属性访问事件参数
 
-        [AT_EB_EVENT(kName).observer(self) reg:^(ATEBEvent<ATEB_DATA_kName *> * _Nonnull event) {}];
+        [AT_EB_EVENT(kName).observer(self) reg:^(ATEBEvent<ATEB_DATA_kName *> * _Nonnull event) {
+                event.data.a;
+                event.data.b;
+        }];
         
 - 取消订阅
 
