@@ -1,6 +1,6 @@
 # ATEventBus
 
-OC类型安全的基于block的事件总线，自动生成参数模型，支持Xcode代码提示，兼容NSNotification
+基于block，类型安全，自动生成参数模型，父子类可订阅同一个事件，支持Xcode代码提示，兼容NSNotification
 
 使用说明：
 
